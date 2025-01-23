@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Cybersécurité</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <div id="start-screen">
+            <h1>Quiz Cybersécurité</h1>
+            <button id="start-button">Commencer</button>
+        </div>
+        <div id="quiz-screen" class="hidden">
+            <h2 id="question-number"></h2>
+            <h3 id="question"></h3>
+            <div id="choices"></div>
+            <button id="next-button" class="hidden">Suivant</button>
+            <p id="answer-feedback" class="hidden"></p>
+        </div>
+        <div id="end-screen" class="hidden">
+            <h2>Merci d'avoir joué !</h2>
+            <p>Votre score : <span id="score"></span> / <span id="total-questions"></span></p>
+            <button id="restart-button">Recommencer</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
