@@ -14,6 +14,11 @@ const questions = [
         choices: ["Un cybersécuritien", "Un cybermen", "Expert cybersécurité", "Un informaticien"],
         correct: [2],
     },
+    {
+        question: "Combien de personnes sont victime de cyberattaques par an ?",
+        choices: ["1", "100 000 000", "2500", "100 000"],
+        correct: [2],
+    },
 ];
 
 let currentQuestionIndex = 0;
