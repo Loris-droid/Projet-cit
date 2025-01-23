@@ -59,9 +59,15 @@ button:hover {
     color: #fff;
 }
 
-#answer-feedback {
-    margin-top: 10px;
-    font-size: 16px;
+/* Écran intermédiaire pour les bonnes et mauvaises réponses */
+.correct-answer {
+    color: green;
     font-weight: bold;
-    color: #007bff;
+    margin-top: 10px;
+}
+
+.incorrect-answer {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
 }
