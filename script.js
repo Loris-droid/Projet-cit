@@ -1,3 +1,4 @@
+// Les questions et réponses du quiz
 const questions = [
     {
         question: "Qu'est-ce que la cybersécurité ?",
@@ -38,13 +39,13 @@ document.getElementById("start-button").addEventListener("click", startQuiz);
 validateButton.addEventListener("click", validateAnswers);
 nextButton.addEventListener("click", nextQuestion);
 restartButton.addEventListener("click", restartQuiz);
-
+// Démarrage du quiz
 function startQuiz() {
     startScreen.classList.add("hidden");
     quizScreen.classList.remove("hidden");
     showQuestion();
 }
-
+// Afficher la question actuelle, les choix et les réponses
 function showQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     questionEl.textContent = `Question ${currentQuestionIndex + 1}: ${currentQuestion.question}`;
@@ -114,6 +115,7 @@ function validateAnswers() {
     nextButton.classList.remove("hidden");
 }
 
+// Question suivante
 function nextQuestion() {
     currentQuestionIndex++;
 
