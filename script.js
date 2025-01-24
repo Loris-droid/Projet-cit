@@ -20,6 +20,36 @@ const questions = [
         choices: ["1", "100 000 000", "2500", "100 000"],
         correct: [2],
     },
+    {
+        question: "Qui en est conserné ? (2 réponse) ",
+        choices: ["Les adolescents", "Les entreprises", "Les administrations", "les informaticiens"],
+        correct: [1, 2],
+    },
+    {
+        question: "Est-ce une bonne idée d'utiliser le même mot de passe sur tous ses comptes ?",
+        choices: ["Oui c'est une super idée", "Non c'est la pire idée"],
+        correct: [1],
+    },
+    {
+        question: "Faut-il s'assurer contre le risque cyber ?",
+        choices: ["Non ça ne sert à rien", "Peut-être", "Cela aggraverais la situation", "Oui c'est très important pour limiter la crise"],
+        correct: [3],
+    },
+    {
+        question: "Il y a-t-il un ministère de la cyber sécurité ?",
+        choices: ["Oui", "Non", "Pas encore, mais c'est en projet"],
+        correct: [2],
+    },
+    {
+        question: "Que faire en cas de cyber attaque ?",
+        choices: ["Se cacher sous une table", "Appeler les pompiers", "La signaler et porter plainte", "Ne pas paniquer et aller chez un spécialiste"],
+        correct: [2],
+    },
+    {
+        question: "Quand est le cybermois ?",
+        choices: ["En janvier", "Ce mois-ci", "En octobre", "En décembre"],
+        correct: [2],
+    },
 ];
 
 let currentQuestionIndex = 0;
