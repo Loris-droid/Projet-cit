@@ -95,6 +95,8 @@ function validateAnswers() {
         const answerText = document.createElement("p");
         answerText.textContent = choice;
 
+
+
         // Vérifier si la réponse est correcte ou incorrecte
         if (correctAnswers.includes(index)) {
             answerText.classList.add("correct-answer");  // Appliquer la classe pour les bonnes réponses
@@ -104,7 +106,7 @@ function validateAnswers() {
 
         // Si l'utilisateur a sélectionné cette réponse, on l'affiche comme "sélectionnée"
         if (selectedChoices.includes(index)) {
-            answerText.classList.add("selected");
+            answerText.classList.add("selected-answer");
         }
 
         choicesEl.appendChild(answerText);
