@@ -21,8 +21,8 @@ const questions = [
         correct: [2],
     },
     {
-        question: "Qui en est conserné ? (2 réponse) ",
-        choices: ["Les adolescents", "Les entreprises", "Les administrations", "les informaticiens"],
+        question: "Qui en est concerné ? (2 réponses)",
+        choices: ["Les adolescents", "Les entreprises", "Les administrations", "Les informaticiens"],
         correct: [1, 2],
     },
     {
@@ -32,16 +32,16 @@ const questions = [
     },
     {
         question: "Faut-il s'assurer contre le risque cyber ?",
-        choices: ["Non ça ne sert à rien", "Peut-être", "Cela aggraverais la situation", "Oui c'est très important pour limiter la crise"],
+        choices: ["Non ça ne sert à rien", "Peut-être", "Cela aggraverait la situation", "Oui c'est très important pour limiter la crise"],
         correct: [3],
     },
     {
-        question: "Il y a-t-il un ministère de la cyber sécurité ?",
+        question: "Y a-t-il un ministère de la cybersécurité ?",
         choices: ["Oui", "Non", "Pas encore, mais c'est en projet"],
         correct: [2],
     },
     {
-        question: "Que faire en cas de cyber attaque ?",
+        question: "Que faire en cas de cyberattaque ?",
         choices: ["Se cacher sous une table", "Appeler les pompiers", "La signaler et porter plainte", "Ne pas paniquer et aller chez un spécialiste"],
         correct: [2],
     },
@@ -64,18 +64,23 @@ const choicesEl = document.getElementById("choices");
 const validateButton = document.getElementById("validate-button");
 const nextButton = document.getElementById("next-button");
 const restartButton = document.getElementById("restart-button");
+const scoreEl = document.getElementById("score");
 
 document.getElementById("start-button").addEventListener("click", startQuiz);
 validateButton.addEventListener("click", validateAnswers);
 nextButton.addEventListener("click", nextQuestion);
 restartButton.addEventListener("click", restartQuiz);
+
 // Démarrage du quiz
 function startQuiz() {
     startScreen.classList.add("hidden");
     quizScreen.classList.remove("hidden");
+    score = 0; // Réinitialiser le score
+    currentQuestionIndex = 0; // Réinitialiser l'index des questions
     showQuestion();
 }
-// Afficher la question actuelle, les choix et les réponses
+
+// Afficher la question actuelle
 function showQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     questionEl.textContent = `Question ${currentQuestionIndex + 1}: ${currentQuestion.question}`;
@@ -94,16 +99,17 @@ function showQuestion() {
     nextButton.classList.add("hidden");
 }
 
+// Gérer la sélection des choix
 function toggleChoice(index, button) {
     const currentQuestion = questions[currentQuestionIndex];
 
     if (currentQuestion.correct.length === 1) {
-        // Si la question a une seule bonne réponse, on autorise une seule sélection
+        // Une seule réponse possible
         selectedChoices = [index];
-        document.querySelectorAll("#choices button").forEach(btn => btn.classList.remove("selected"));
+        document.querySelectorAll("#choices button").forEach((btn) => btn.classList.remove("selected"));
         button.classList.add("selected");
     } else {
-        // Si la question a plusieurs bonnes réponses, on permet plusieurs sélections
+        // Plusieurs réponses possibles
         if (selectedChoices.includes(index)) {
             selectedChoices = selectedChoices.filter((i) => i !== index);
             button.classList.remove("selected");
@@ -114,40 +120,44 @@ function toggleChoice(index, button) {
     }
 }
 
+// Valider les réponses
 function validateAnswers() {
     const currentQuestion = questions[currentQuestionIndex];
     const correctAnswers = currentQuestion.correct;
 
-    // Effacer les choix précédents
-    choicesEl.innerHTML = "";
+    // Vérifier si toutes les réponses sélectionnées sont correctes
+    const isCorrect =
+        correctAnswers.every((answer) => selectedChoices.includes(answer)) &&
+        selectedChoices.every((choice) => correctAnswers.includes(choice));
 
+    if (isCorrect) {
+        score++; // Incrémenter le score
+    }
+
+    // Afficher les réponses avec les couleurs
+    choicesEl.innerHTML = "";
     currentQuestion.choices.forEach((choice, index) => {
         const answerText = document.createElement("p");
         answerText.textContent = choice;
 
-
-
-        // Vérifier si la réponse est correcte ou incorrecte
         if (correctAnswers.includes(index)) {
-            answerText.classList.add("correct-answer");  // Appliquer la classe pour les bonnes réponses
+            answerText.classList.add("correct-answer"); // Bonne réponse
         } else {
-            answerText.classList.add("incorrect-answer");  // Appliquer la classe pour les mauvaises réponses
+            answerText.classList.add("incorrect-answer"); // Mauvaise réponse
         }
 
-        // Si l'utilisateur a sélectionné cette réponse, on l'affiche comme "sélectionnée"
         if (selectedChoices.includes(index)) {
-            answerText.classList.add("selected-answer");
+            answerText.classList.add("selected-answer"); // Réponse sélectionnée
         }
 
         choicesEl.appendChild(answerText);
     });
 
-    // Masquer le bouton "Valider" et afficher "Suivant"
     validateButton.classList.add("hidden");
     nextButton.classList.remove("hidden");
 }
 
-// Question suivante
+// Passer à la question suivante
 function nextQuestion() {
     currentQuestionIndex++;
 
@@ -158,11 +168,14 @@ function nextQuestion() {
     }
 }
 
+// Terminer le quiz
 function endQuiz() {
     quizScreen.classList.add("hidden");
     endScreen.classList.remove("hidden");
+    scoreEl.textContent = `Votre score est de ${score} / ${questions.length}`;
 }
 
+// Redémarrer le quiz
 function restartQuiz() {
     currentQuestionIndex = 0;
     score = 0;
