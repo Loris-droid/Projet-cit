@@ -18,7 +18,7 @@ const questions = [
     {
         question: "Combien de personnes sont victime de cyberattaques par an ?",
         choices: ["1", "100 000 000", "2500", "100 000"],
-        correct: [2],
+        correct: [3],
     },
     {
         question: "Qui en est concerné ? (2 réponses)",
