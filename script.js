@@ -1,8 +1,9 @@
-// Les questions et réponses du quiz (sans doublons)
+// Les questions et réponses du quiz
 const allQuestions = [
     {
         question: "Qu'est-ce que la cybersécurité ?",
-        choices: ["Un fruit",
+        choices: [
+                "Un fruit",
                 "Sécurité d'internet",
                 "Un sport",
                 "Une saison"],
@@ -10,7 +11,8 @@ const allQuestions = [
     },
     {
         question: "Quels sont les 3 piliers de la cybersécurité ?",
-        choices: ["La préparation",
+        choices: [
+                "La préparation",
                 "La protection",
                 "La liberté",
                 "La réaction"],
@@ -18,7 +20,8 @@ const allQuestions = [
     },
     {
         question: "Comment appelle-t-on une personne qui travaille dans la cybersécurité ?",
-        choices: ["Un cybersécuritien",
+        choices: [
+                "Un cybersécuritien",
                 "Un cybermen",
                 "Expert cybersécurité",
                 "Un informaticien"],
@@ -26,7 +29,8 @@ const allQuestions = [
     },
     {
         question: "Combien de personnes sont victime de cyberattaques par an ?",
-        choices: ["1",
+        choices: [
+                "1",
                 "100 000 000",
                 "2500",
                 "100 000"],
@@ -34,7 +38,8 @@ const allQuestions = [
     },
     {
         question: "Qui est concerné par les cyber attaques ? (2 réponses)",
-        choices: ["Les adolescents",
+        choices: [
+                "Les adolescents",
                 "Les entreprises",
                 "Les administrations",
                 "Les informaticiens"],
@@ -42,13 +47,15 @@ const allQuestions = [
     },
     {
         question: "Est-ce une bonne idée d'utiliser le même mot de passe sur tous ses comptes ?",
-        choices: ["Oui c'est une super idée",
+        choices: [
+                "Oui c'est une super idée",
                  "Non c'est la pire idée"],
         correct: [1],
     },
     {
         question: "Faut-il s'assurer contre le risque cyber ?",
-        choices: ["Non ça ne sert à rien",
+        choices: [
+                "Non ça ne sert à rien",
                 "Peut-être",
                 "Cela aggraverait la situation",
                 "Oui c'est très important pour limiter la crise"],
@@ -56,14 +63,16 @@ const allQuestions = [
     },
     {
         question: "Y a-t-il un ministère de la cybersécurité ?",
-        choices: ["Oui",
+        choices: [
+                "Oui",
                 "Non",
                 "Pas encore, mais c'est en projet"],
         correct: [2],
     },
     {
         question: "Que faire en cas de cyberattaque ?",
-        choices: ["Se cacher sous une table",
+        choices: [
+                "Se cacher sous une table",
                 "Appeler les pompiers",
                 "La signaler et porter plainte",
                 "Ne pas paniquer et aller chez un spécialiste"],
@@ -71,7 +80,8 @@ const allQuestions = [
     },
     {
         question: "Quand est le cybermois ?",
-        choices: ["En janvier",
+        choices: [  
+                "En janvier",
                 "Ce mois-ci",
                 "En octobre", 
                 "En décembre"],
@@ -93,7 +103,7 @@ const allQuestions = [
         choices: [
             "123456", 
             "MotDePasse", 
-            "Ch@t-2024!", 
+            "Ch@t-2025!", 
             "MonAnniversaire"
         ],
         correct: [2]
@@ -142,7 +152,7 @@ const allQuestions = [
         question: "Que faire si tu vois un message de harcèlement en ligne ?",
         choices: [
             "Le liker", 
-            "En parler à un adulte et le signaler", 
+            "Le signaler", 
             "Ne rien dire", 
             "Le partager"
         ],
@@ -161,7 +171,7 @@ const allQuestions = [
     {
         question: "Que dois-tu faire avant de télécharger une application ?",
         choices: [
-            "Demander à tes parents", 
+            "Regarder si l'application est sécurisée", 
             "Télécharger vite fait", 
             "Partager ton mot de passe", 
             "Éteindre le téléphone"
@@ -182,7 +192,7 @@ const allQuestions = [
         question: "Que faire si ton compte est piraté ?",
         choices: [
             "Crier sur l'ordinateur", 
-            "Prévenir un adulte et changer le mot de passe", 
+            "Changer le mot de passe", 
             "Ne plus jamais utiliser Internet", 
             "Acheter un nouveau téléphone"
         ],
@@ -212,7 +222,7 @@ const allQuestions = [
         question: "Que faire si un site te demande ton numéro de téléphone ?",
         choices: [
             "Le donner tout de suite", 
-            "Demander l'autorisation à un adulte", 
+            "Regarder si le site est fiable", 
             "Inventer un numéro", 
             "Quitter le site"
         ],
@@ -242,7 +252,7 @@ const allQuestions = [
         question: "Que dois-tu faire si tu reçois un cadeau virtuel d'un inconnu ?",
         choices: [
             "L'accepter et le remercier", 
-            "Refuser et prévenir un adulte", 
+            "Refuser", 
             "Le vendre en ligne", 
             "Cacher ton téléphone"
         ],
@@ -269,7 +279,7 @@ const allQuestions = [
         correct: [1]
     },
     {
-        question: "Que faire si tu trouves un ordinateur allumé dans la salle de classe ?",
+        question: "Que faire si tu trouves un ordinateur allumé ?",
         choices: [
             "Jouer à des jeux", 
             "Fermer la session ou prévenir un adulte", 
