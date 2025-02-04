@@ -34,7 +34,7 @@ const allQuestions = [
                 "100 000 000",
                 "2500",
                 "100 000"],
-        correct: [2],
+        correct: [3],
     },
     {
         question: "Qui est concerné par les cyber attaques ? (2 réponses)",
