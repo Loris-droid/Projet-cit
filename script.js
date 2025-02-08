@@ -370,6 +370,7 @@ function showQuestion() {
 // Gérer la sélection des choix
 function toggleChoice(index, button) {
     const currentQuestion = questions[currentQuestionIndex];
+    const maxSelections = currentQuestion.correct.length;
 
     if (currentQuestion.correct.length === 1) {
         // Une seule réponse possible
@@ -377,13 +378,17 @@ function toggleChoice(index, button) {
         document.querySelectorAll("#choices button").forEach((btn) => btn.classList.remove("selected"));
         button.classList.add("selected");
     } else {
-        // Plusieurs réponses possibles
+        // Réponses multiples
         if (selectedChoices.includes(index)) {
+            // Désélectionner
             selectedChoices = selectedChoices.filter((i) => i !== index);
             button.classList.remove("selected");
         } else {
-            selectedChoices.push(index);
-            button.classList.add("selected");
+            // Empêcher de sélectionner plus que le nombre de réponses attendues
+            if (selectedChoices.length < maxSelections) {
+                selectedChoices.push(index);
+                button.classList.add("selected");
+            }
         }
     }
 }
