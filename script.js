@@ -282,7 +282,7 @@ const allQuestions = [
         question: "Que faire si tu trouves un ordinateur allumé ?",
         choices: [
             "Jouer à des jeux", 
-            "Fermer la session ou prévenir un adulte", 
+            "Fermer la session", 
             "Effacer tous les fichiers", 
             "Le prendre pour toi"
         ],
