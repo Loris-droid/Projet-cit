@@ -242,7 +242,7 @@ const allQuestions = [
         question: "Que signifie « signaler » un message bizarre ?",
         choices: [
             "Le partager avec des amis", 
-            "Avertir les modérateurs du site", 
+            "Avertir des modérateurs", 
             "Le supprimer", 
             "L'ignorer"
         ],
