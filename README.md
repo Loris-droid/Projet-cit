@@ -1,10 +1,10 @@
-# Un quizz pour tester tes connaisance en cybersécurité
+# Un quizz pour tester tes connaisances en cybersécurité
 
 
 
 
 
-# Quiz de Cybersécurité
+# Quizz de Cybersécurité
 
 Un quiz interactif et éducatif sur la cybersécurité, conçu spécialement pour les élèves de 5ᵉ et 6ᵉ. Ce projet vise à sensibiliser les jeunes aux bonnes pratiques en ligne tout en s'amusant.
 
