@@ -6,7 +6,7 @@ fetch('ficchier donées/questions_cybersecurite.json')
     .then(data => {
         allQuestions = data;
 
-        // Supprimer les doublons (comme dans ton code actuel)
+
         uniqueQuestions = [];
         const seenQuestions = new Set();
 
@@ -19,8 +19,7 @@ fetch('ficchier donées/questions_cybersecurite.json')
 
         allQuestions = uniqueQuestions;
 
-        // Tu peux maintenant activer le bouton de démarrage par exemple
-        document.getElementById("start-button").disabled = false;
+         document.getElementById("start-button").disabled = false;
     })
     .catch(error => {
         console.error("Erreur de chargement des questions :", error);
