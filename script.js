@@ -1,7 +1,7 @@
 let allQuestions = [];
 let uniqueQuestions = [];
 
-fetch('questions_cybersecurite.json')
+fetch('ficchier donées/questions_cybersecurite.json')
     .then(response => response.json())
     .then(data => {
         allQuestions = data;
