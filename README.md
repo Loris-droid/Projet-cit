@@ -39,11 +39,11 @@ Un quiz interactif et éducatif sur la cybersécurité, conçu spécialement pou
 
 ## 📦 Structure du projet
 cybersecurite-quiz/
-- ├── index.html # Structure du quiz
-- ├── styles.css # Styles CSS pour l'interface
-- ├── script.js # Logique JavaScript du quiz
-- ├── README.md # Documentation du projet
-- └── assets/ # Dossier pour les images (ex : background.webp)
+- ├── index.html **Structure du quiz**
+- ├── styles.css **Styles CSS pour l'interface**
+- ├── script.js **Logique JavaScript du quiz**
+- ├── README.md **Documentation du projet**
+- └── assets/ **Dossier pour les images (ex : background.webp)**
 
 ---
 
