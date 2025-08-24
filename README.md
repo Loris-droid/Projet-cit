@@ -49,3 +49,5 @@ cybersecurite-quiz/
 
 ## 🚀 Comment utiliser le projet
 Se rendre sur le site : https://loris-droid.github.io/Projet-cit/
+
+Made by : Loris & Lucie
